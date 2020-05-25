@@ -1,4 +1,5 @@
 import discord
+import random
 from discord.ext import commands
 
 class Fuck(commands.Cog):
@@ -12,16 +13,9 @@ class Fuck(commands.Cog):
         print('Providing "Content"')
 
 
-#    @commands.command()
-#    async def cheese(self, ctx):
-#        await ctx.send('```TEXT```')
-
-
-
     @commands.command()
-    async def mozzarella(self, ctx):
-        await ctx.send('```Mozzarella cheese is a sliceable curd cheese originating in Italy. Traditional Mozzarella cheese is made from milk of water buffalos herded in very few countries such as Italy and Bulgaria. As a result, most of the Mozzarella cheeses available now are made from cows milk. It is a semi-soft cheese with a fresh milky flavor```')
-        await ctx.send('https://en.wikipedia.org/wiki/Mozzarella')
+    async def fuck(self, ctx):
+        await ctx.send('https://e621.net/posts/' + random.randint(100,2270250)
 
 
 def setup(client):
