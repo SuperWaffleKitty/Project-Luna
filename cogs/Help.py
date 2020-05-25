@@ -15,10 +15,10 @@ class Help(commands.Cog):
     @commands.command()
     async def help(self, ctx):
         await ctx.send('**Commands:**')
-        await ctx.send('**.help** : Prints this message')
-        await ctx.send('**.cheesepic** : Sends a random image of cheese')
-        await ctx.send('For the full list of cheese commands, click the link Below')
-        await ctx.send('https://github.com/SuperWaffleKitty/CheeseBot/blob/master/COMMANDS.md')
+        await ctx.send('**!help** : Prints this message')
+        await ctx.send('**!fuck** : Sends a random e621 image')
+        #await ctx.send('For the full list of cheese commands, click the link Below')
+        #await ctx.send('https://github.com/SuperWaffleKitty/CheeseBot/blob/master/COMMANDS.md')
 
 
 
