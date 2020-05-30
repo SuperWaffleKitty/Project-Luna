@@ -20,9 +20,22 @@ class Fuck(commands.Cog):
 
 
     @commands.command()
-    async def fuck(self, ctx):
+    async def random(self, ctx):
         link = random.randint(100,2270250)
         await ctx.send('https://e621.net/posts/' + str(link))
+    #https://e621.net/posts?page=2&tags=anthro
+
+    @commands.command()
+    async def me(self, ctx):
+        await ctx.send("Well that's depressing")
+
+    @commands.command()
+    async def you(self, ctx):
+        await ctx.send("My pleasure")
+
+    @commands.command()
+    async def yourself(self, ctx):
+        await ctx.send("Why don't you do it for me pussy.")
 
 
 def setup(client):
