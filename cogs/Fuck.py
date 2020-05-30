@@ -19,8 +19,16 @@ class Fuck(commands.Cog):
     #    await ctx.send('```THIS IS NOT EBIC```')
 
 
+
+
     @commands.command()
     async def random(self, ctx):
+
+        if not isinstance(ctx.channel, discord.DMChannel):
+                if not isinstance(ctx.channel, discord.GroupChannel):
+                    if not ctx.channel.is_nsfw():
+                        await ctx.send("Cannot be used in non-NSFW channels!")
+                        return
         link = random.randint(100,2270250)
         await ctx.send('https://e621.net/posts/' + str(link))
     #https://e621.net/posts?page=2&tags=anthro
