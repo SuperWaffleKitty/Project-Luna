@@ -13,15 +13,17 @@ wget https://github.com/SuperWaffleKitty/Project-Luna.git
 
 Running bot:
 
-```
 Make sure you have Python3 installed.
 
 Install discord rewrite python repo:
-`pip install discord.py`
+```
+pip install discord.py
+```
 
 Run Bot:
-`./start.sh`
-```
+
+**Bash:**```./start.sh```
+**CMD:**```start.bat```
 
 Once added, the bot will announce itself to the server
 
