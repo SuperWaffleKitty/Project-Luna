@@ -1,2 +1,3 @@
-config.py
-*.bat
+*.pyc
+/cogs/__pycache__
+/__pycache__
