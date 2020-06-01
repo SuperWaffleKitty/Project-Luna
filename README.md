@@ -3,24 +3,27 @@
 Discord Bot developed using the discord-rewrite API in python. The Bots purpose in life is to respond to your commands and do as told. If it does not, please contact me and I will Frankenstein it back together.
 
 
-### Installing
+## Installing
 
 To install, follow the steps below:
 
-Assuring the your server is ready:
 ```
-make sure that you have the rank and ability to add bots to your server
+wget https://github.com/SuperWaffleKitty/Project-Luna.git
 ```
 
-Adding Bot to server:
+Running bot:
 
 ```
-To add the bot to your server, click the link Below
+Make sure you have Python3 installed.
+
+Install discord rewrite python repo:
+`pip install discord.py`
+
+Run Bot:
+`./start.sh`
 ```
-**In Progress**
 
 Once added, the bot will announce itself to the server
-
 
 ## Commands
 
