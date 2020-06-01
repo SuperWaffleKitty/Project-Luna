@@ -1,6 +1,6 @@
 # Project-Luna
 
-Discord Bot developed using the discord-rewrite API in python. The Bots purpose in life is to respond to your commands and do as told. If it does not, please contact me and I will Frankenstein it back together. It also does porn stuff (;.
+Discord Bot developed using the discord-rewrite API in python. The Bots purpose in life is to respond to your commands and do as told. If it does not, please contact me and I will Frankenstein it back together. It also does porn stuff (;
 
 
 ## Installing
