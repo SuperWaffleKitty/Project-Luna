@@ -2,3 +2,4 @@
 *.pyc
 *.sh
 /cogs/__pycache__
+/__pycache__
