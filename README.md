@@ -46,6 +46,3 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
-
-* [PurpleBooth](https://gist.github.com/PurpleBooth) for the README template
-* [Giphy](https://giphy.com/) for access to gifs
