@@ -1,1 +1,1 @@
-BOT_TOKEN = 'Whatever the frik your bot token is'
+BOT_TOKEN = 'haha bot token goes brrrr'
