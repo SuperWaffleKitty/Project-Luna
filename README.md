@@ -17,7 +17,7 @@ Make sure you have Python3 installed.
 
 Install discord rewrite python repo:
 ```
-pip install discord.py
+pip install discord.py humanfriendly requests
 ```
 
 Run Bot:
@@ -26,10 +26,6 @@ Run Bot:
 **CMD:**```start.bat```
 
 Once added, the bot will announce itself to the server
-
-## Commands
-
-* For a full list of commands, visit [COMMANDS](COMMANDS.md)
 
 ## Built With
 
@@ -42,6 +38,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 ## Authors
 
 * **SuperWaffleKitty** - *Initial work* - [SuperWaffleKitty](https://github.com/SuperWaffleKitty)
+* **JezzaR-The-Proto** - *Implementing the E6 API* [JezzaR-The-Proto](https://github.com/JezzaR-The-Proto)
 
 ## License
 
