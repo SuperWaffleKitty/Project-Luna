@@ -29,11 +29,7 @@ Once added, the bot will announce itself to the server
 
 ## Built With
 
-* [Discord ReWrite]https://discordpy.readthedocs.io/en/latest/) - Bot API
-
-## Contributing
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+* [Discord ReWrite](https://discordpy.readthedocs.io/en/latest/) - Bot API
 
 ## Authors
 
