@@ -1,5 +1,6 @@
 import discord
 import random
+import requests
 from discord.ext import commands
 
 #Initiates Fuck class
@@ -14,17 +15,25 @@ class Fuck(commands.Cog):
     async def on_ready(self):
         print('Providing "Content"')
 
-
-    #Returns random e621 post only in NSFW Channels
+    #Returns random e621 post only in NSFW Channels using the E6 API
     @commands.command()
+    @commands.cooldown(1,3,commands.BucketType.user)
     async def random(self, ctx):
         if not isinstance(ctx.channel, discord.DMChannel):
                 if not isinstance(ctx.channel, discord.GroupChannel):
                     if not ctx.channel.is_nsfw():
                         await ctx.send("Cannot be used in non-NSFW channels!")
                         return
+                        
+        headers = {"User-Agent":"Project-Luna/1.0 (API Usage by jezzar on E621)"}
         link = random.randint(100,2270250)
-        await ctx.send('https://e621.net/posts/' + str(link))
+        Req = requests.get(f"https://e621.net/posts.json?tags=id:{link}&rating:explicit", headers=headers)
+        ReqJson = Req.json()
+        if Req.status_code != 200:
+            await ctx.send(f"Couldn't contact e621. Error code: {Req.status_code}.\nJson: {ReqJson}")
+            return
+        Post = ReqJson["posts"][0]["file"]["url"]
+        await ctx.send(f"Here is your random yiff: {Post}")
 
     #Note for myself: https://e621.net/posts?page=&tags=
 
@@ -42,7 +51,6 @@ class Fuck(commands.Cog):
     @commands.command()
     async def yourself(self, ctx):
         await ctx.send("Why don't you do it for me pussy.")
-
 
 def setup(client):
     client.add_cog(Fuck(client))

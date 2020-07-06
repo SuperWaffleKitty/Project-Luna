@@ -1,7 +1,6 @@
-import discord
-import os
-import config
+import discord, os, config, math
 from discord.ext import commands
+from humanfriendly import format_timespan
 
 #Sets the command prefix
 client = commands.Bot(command_prefix = '!fuck ')
@@ -16,12 +15,6 @@ async def on_ready():
     await client.change_presence(activity=discord.Game('Kinky Stuff'))
     print('Bot is being Sexy')
 
-
-#TEMP, REMOVE THIS LATER
-@client.command()
-async def clear(ctx, amount=5):
-    await ctx.channel.purge(limit=amount)
-
 #Command to load cogs
 @client.command()
 async def load(ctx, extension):
@@ -31,6 +24,19 @@ async def load(ctx, extension):
 @client.command()
 async def unload(ctx, extension):
     client.unload_extension(f'cogs.{extension}')
+
+@client.event
+async def on_command_error(ctx, error):
+    ignored = (commands.CommandNotFound, commands.UserInputError)
+    if hasattr(ctx.command,"on_error"):
+        return
+    error = getattr(error, 'original', error)
+    if isinstance(error, ignored):
+        return
+    elif isinstance(error, commands.CommandOnCooldown):
+        seconds = math.ceil(error.retry_after)
+        towait = format_timespan(seconds)
+        return await ctx.send(f"Woah woah, slow down there, you have to wait {towait} to do this command again.")
 
 #Removes .cog from info display
 for filename in os.listdir('./cogs'):
