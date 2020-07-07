@@ -1,44 +1,57 @@
-# Project-Luna
+<h1 align="center">
+  <br>
+  <a href="https://github.com/SuperWaffleKitty/Project-Luna"><img src="https://www.mediafire.com/view/t4pc9uejcdl5yci/e621_logo.png" alt="Project Luna - Discord Bot"></a>
+  <br>
+  Project Luna E621 Discord Bot
+  <br>
+</h1>
 
-Discord Bot developed using the discord-rewrite API in python. The Bots purpose in life is to respond to your commands and do as told. If it does not, please contact me and I will Frankenstein it back together. It also does porn stuff (;
+<p align="center">
+  <a href="https://www.python.org/downloads/">
+    <img src="https://img.shields.io/badge/Made%20With-Python%203.8-blue.svg?style=for-the-badge" alt="Made with Python 3.8">
+  </a>
 
+<p align="center">
+  <a href="#overview">Overview</a>
+  •
+  <a href="#installation">Installation</a>
+  •
+  <a href="#Authors">Authors</a>
+  •
+  <a href="#license">License</a>
+</p>
 
-## Installing
+# Overview
 
-To install, follow the steps below:
+Project Luna is a discord bot which provides E621 content using Discord Rewrite, and the E621 API.
 
-```
-wget https://github.com/SuperWaffleKitty/Project-Luna.git
-```
+**The default set of modules includes and is not limited to:**
 
-Running bot:
+- Randomized Image requests
+- Image Requests based on specified tags
 
-Make sure you have Python3 installed.
+# Installation
 
-Install discord rewrite python repo:
-```
-pip install discord.py humanfriendly requests
-```
+**The following platforms are officially supported:**
 
-Run Bot:
+- *Windows*
+- *MacOS*
+- *Most linux distros*
 
-**Bash:**```./start.sh```
-**CMD:**```start.bat```
+Before installing, make sure that you have Python 3.8 installed as well as all required dependencies:
+- Discord
+- humanfriendly
 
-Once added, the bot will announce itself to the server
+If you have any questions about set-up, feel free to contact me at superwafflekitty@protonmail.com
 
-## Built With
-
-* [Discord ReWrite](https://discordpy.readthedocs.io/en/latest/) - Bot API
-* [E621 API] (https://e621.net/help/api) - Image processing
-
-## Authors
+# Authors
 
 * **SuperWaffleKitty** - *Initial Work* - [SuperWaffleKitty](https://github.com/SuperWaffleKitty)
 * **JezzaR-The-Proto** - *Implementing the E6 API* [JezzaR-The-Proto](https://github.com/JezzaR-The-Proto)
 
-## License
+# License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+Released under the [MIT](https://mit-license.org/) license.
 
-## Acknowledgments
+Luna is named after a character in the show "Helluva Boss" by
+[Vivziepop](https://www.youtube.com/user/SpindleHorse).
