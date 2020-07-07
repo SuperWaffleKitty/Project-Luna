@@ -25,6 +25,8 @@
 
 Project Luna is a discord bot which provides E621 content using Discord Rewrite, and the E621 API.
 
+You can invite the bot by clicking [HERE] (https://discordapp.com/oauth2/authorize?client_id=653789363465093132&scope=bot&permissions=117760).
+
 **The default set of modules includes and is not limited to:**
 
 - Randomized Image requests
