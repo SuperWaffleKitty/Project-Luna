@@ -3,10 +3,18 @@ from discord.ext import commands
 from humanfriendly import format_timespan
 
 #Sets the command prefix
-client = commands.Bot(command_prefix = '^')
+client = commands.Bot(command_prefix = '$')
 
 #Removes the default help command
 client.remove_command('help')
+
+#Introduces itself when joining guild
+@client.event
+async def on_guild_join(guild):
+    for channel in guild.text_channels:
+        if channel.permissions_for(guild.me).send_messages:
+            await channel.send("Hello I'm Luna, and I'm here to rock your world :wink:" + '\n' + "You can type '$yiff help' for a list of commands" + '\n' + "If you want to get inside of me, visit my github page:" + '\n' + "https://github.com/SuperWaffleKitty/Project-Luna")
+        break
 
 
 #Changes the bot's custom status & displays that the bot is running in the terminal.
