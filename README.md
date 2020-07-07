@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://github.com/SuperWaffleKitty/Project-Luna"><img src="https://www.mediafire.com/view/t4pc9uejcdl5yci/e621_logo.png" alt="Project Luna - Discord Bot"></a>
+  <a href="https://github.com/SuperWaffleKitty/Project-Luna"><img src="https://www.mediafire.com/view/t4pc9uejcdl5yci/e621_logo.png"></a>
   <br>
   Project Luna E621 Discord Bot
   <br>
