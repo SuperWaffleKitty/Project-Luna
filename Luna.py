@@ -3,7 +3,7 @@ from discord.ext import commands
 from humanfriendly import format_timespan
 
 #Sets the command prefix
-client = commands.Bot(command_prefix = '!fuck ')
+client = commands.Bot(command_prefix = '^')
 
 #Removes the default help command
 client.remove_command('help')
