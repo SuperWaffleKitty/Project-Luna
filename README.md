@@ -30,10 +30,11 @@ Once added, the bot will announce itself to the server
 ## Built With
 
 * [Discord ReWrite](https://discordpy.readthedocs.io/en/latest/) - Bot API
+* [E621 API] (https://e621.net/help/api) - Image processing
 
 ## Authors
 
-* **SuperWaffleKitty** - *Initial work* - [SuperWaffleKitty](https://github.com/SuperWaffleKitty)
+* **SuperWaffleKitty** - *Initial Work* - [SuperWaffleKitty](https://github.com/SuperWaffleKitty)
 * **JezzaR-The-Proto** - *Implementing the E6 API* [JezzaR-The-Proto](https://github.com/JezzaR-The-Proto)
 
 ## License
