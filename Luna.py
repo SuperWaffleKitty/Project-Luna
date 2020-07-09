@@ -20,7 +20,7 @@ async def on_guild_join(guild):
 #Changes the bot's custom status & displays that the bot is running in the terminal.
 @client.event
 async def on_ready():
-    await client.change_presence(activity=discord.Game('Kinky Stuff'))
+    await client.change_presence(activity=discord.CustomActivity('Being Naughty :wink:'))
     print('Bot is being Sexy')
 
 #Command to load cogs
