@@ -34,7 +34,7 @@ Project Luna is a discord bot which provides E621 content using Discord Rewrite,
 - Randomized Image requests
 - Image Requests based on specified tags
 
-**To view a project roadmap with upcoming features, visit [Roadmap.md]**
+**To view a project roadmap with upcoming features, visit:** [Roadmap.md](Roadmap.md)
 
 
 # Commands
