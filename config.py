@@ -1,2 +1,2 @@
 #Put your Bot Token Here
-BOT_TOKEN = 'Whatever the frik your bot token is'
+BOT_TOKEN = 'NjUzNzg5MzYzNDY1MDkzMTMy.XwPXnw.1NnRMsGNaNdhYA_xvOo-JqHj3gQ'
