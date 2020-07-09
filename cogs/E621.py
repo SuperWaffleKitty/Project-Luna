@@ -14,7 +14,7 @@ class E621(commands.Cog):
     @commands.Cog.listener()
     async def on_ready(self):
         print('Providing e621 "Content"')
-        
+
     #Prints random explicit E621 Content
     @commands.command()
     @commands.cooldown(1,3,commands.BucketType.user)
@@ -34,7 +34,7 @@ class E621(commands.Cog):
                 return
 
             Post = ReqJson["posts"][0]["file"]["url"]
-            await ctx.send(f"Here is your XD so Random yiff: {Post}")
+            await ctx.send(f"Here is your {type} yiff: {Post}")
             return
 
         elif not type:
