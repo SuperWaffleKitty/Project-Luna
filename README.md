@@ -61,7 +61,7 @@ If you have any questions about set-up, feel free to contact me at superwaffleki
 # Authors
 
 * **SuperWaffleKitty** - *Initial Work* - [SuperWaffleKitty](https://github.com/SuperWaffleKitty)
-* **JezzaR-The-Proto** - *Implementing the E6 API* [JezzaR-The-Proto](https://github.com/JezzaR-The-Proto)
+* **JezzaR-The-Proto** - *Implementing the E6 API* - [JezzaR-The-Proto](https://github.com/JezzaR-The-Proto)
 
 # License
 
