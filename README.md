@@ -40,7 +40,7 @@ Project Luna is a discord bot which provides E621 content using Discord Rewrite,
 # Commands
 - Prefix: $
 - Help: $help
-- E621 Content: yiff [tag]
+- E621 Content: $yiff [tag]
 The help command will explain how to use the bot
 
 
