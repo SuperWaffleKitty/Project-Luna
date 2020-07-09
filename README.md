@@ -34,9 +34,13 @@ Project Luna is a discord bot which provides E621 content using Discord Rewrite,
 - Randomized Image requests
 - Image Requests based on specified tags
 
+**To view a project roadmap with upcoming features, visit [Roadmap.md]**
+
+
 # Commands
-- Prefix: $yiff
-- Help: $yiff Help
+- Prefix: $
+- Help: $help
+- E621 Content: yiff [tag]
 The help command will explain how to use the bot
 
 
