@@ -14,9 +14,7 @@ class E621(commands.Cog):
     @commands.Cog.listener()
     async def on_ready(self):
         print('Providing e621 "Content"')
-
-    bigboi = discord.User
-
+        
     #Prints random explicit E621 Content
     @commands.command()
     @commands.cooldown(1,3,commands.BucketType.user)
