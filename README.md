@@ -42,6 +42,7 @@ Project Luna is a discord bot which provides E621 content using Discord Rewrite,
 - Help: $help
 - Prefix change: $changeprefix [prefix]
 - E621 Content: $yiff [tag]
+- FurAffinity Content: $fa [tag]
 The help command will explain how to use the bot
 
 
