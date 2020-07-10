@@ -19,6 +19,7 @@ class FA(commands.Cog):
 
     #Post's FurAffinity image based on user criteria
     @commands.command()
+    @commands.cooldown(1,3,commands.BucketType.user)
     async def fa(self, ctx, type):
 
         #Finds random post id based on user criteria.
