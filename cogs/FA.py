@@ -6,19 +6,22 @@ from discord.ext import commands
 #Initiates FA class
 class FA(commands.Cog):
 
+
     #Initiates the cog
     def __init__(self, client):
         self.client = client
 
-    #Prints message in terminal when running
+    #Prints update message in terminal
     @commands.Cog.listener()
     async def on_ready(self):
         print('Providing FA "Content"')
 
 
-#This is a terrible implementation of this command, but it does work (somewhat)
+    #Post's FurAffinity image based on user criteria
     @commands.command()
     async def fa(self, ctx, type):
+
+        #Finds random post id based on user criteria.
         Req = requests.get(f"https://faexport.spangle.org.uk/search.json?q={type}")
         ReqJson = Req.json()
         if Req.status_code != 200:
@@ -26,6 +29,7 @@ class FA(commands.Cog):
             return
         Post = ReqJson[random.randint(0,68)]
 
+        #Finds and returns image data based on post ID.
         Req = requests.get(f"https://faexport.spangle.org.uk/submission/{Post}.json")
         ReqJson = Req.json()
         if Req.status_code != 200:
