@@ -16,30 +16,23 @@ class FA(commands.Cog):
         print('Providing FA "Content"')
 
 
+#This is a terrible implementation of this command, but it does work (somewhat)
     @commands.command()
-    @commands.cooldown(1,3,commands.BucketType.user)
-    async def FA(self, ctx, type):
-        if not isinstance(ctx.channel, discord.DMChannel):
-                if not isinstance(ctx.channel, discord.GroupChannel):
-                    if not ctx.channel.is_nsfw():
-                        await ctx.send("Cannot be used in non-NSFW channels!")
-                        return
-
-        if type == "random":
-            Post = random.randint(1000,37155571)
-            await ctx.send(f"Here is your XD so Random FA Content: " + f"https://www.furaffinity.net/view/{Post}")
+    async def fa(self, ctx, type):
+        Req = requests.get(f"https://faexport.spangle.org.uk/search.json?q={type}")
+        ReqJson = Req.json()
+        if Req.status_code != 200:
+            await ctx.send(f"Couldn't contact FurAffinity. Error code: {Req.status_code}.\nJson: {ReqJson}")
             return
+        Post = ReqJson[random.randint(0,68)]
 
-        elif type == "":
-            await ctx.send("For bot help, type $help")
+        Req = requests.get(f"https://faexport.spangle.org.uk/submission/{Post}.json")
+        ReqJson = Req.json()
+        if Req.status_code != 200:
+            await ctx.send(f"Couldn't contact FurAffinity. Error code: {Req.status_code}.\nJson: {ReqJson}")
             return
-
-        else:
-            await ctx.send(f"Keywork Usage is currently unavailable for FurAffinity at the moment due to technical issues. However, it is expected to be available soon.")
-            return
-
-
-
+        Post = ReqJson["full"]
+        await ctx.send(f"Here is your FurAffinity content: {Post}")
 
 
 def setup(client):
