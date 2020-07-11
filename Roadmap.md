@@ -5,6 +5,6 @@ Here you can see the process and goals of the project as well as the completed f
 | Feature              | Status      | Progress | Stability | Issues                      |
 |----------------------|-------------|----------|-----------|-----------------------------|
 | E621 Support         | Completed   | 100%     | Stable    | Occasional Missing Response |
-| FurAffinity Support    | In Progress | 20%      | Broken    | No public API               |
-| Custom Bot Prefix     | In Progress | 100%     | Stable    | N / A                       |
+| FurAffinity Support    | Public Beta | 80%      | ESH       | Limited # of posts          |
+| Custom Bot Prefix     | Completed   | 90 %     | Stable    | No authority requirements   |
 | Safe for work images | In Progress | 40%      | ESH       | Lack of image moderation    |

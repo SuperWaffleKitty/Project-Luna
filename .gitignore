@@ -1,4 +1,4 @@
 *.pyc
 /cogs/__pycache__
 /__pycache__
-prefixes.json
+*.json
