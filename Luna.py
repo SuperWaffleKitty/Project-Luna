@@ -4,10 +4,6 @@ from discord.ext import commands
 from humanfriendly import format_timespan
 
 
-#Removes the default help command
-client.remove_command('help')
-
-
 #Loads Guild Specific Prefix
 def get_prefix(client, message):
     with open('prefixes.json', 'r') as f:
@@ -17,6 +13,10 @@ def get_prefix(client, message):
 
 #Set's prefix for guild
 client = commands.Bot(command_prefix = get_prefix)
+
+
+#Removes the default help command
+client.remove_command('help')
 
 
 #Introduces self & initializes prefix when joining guild
@@ -47,7 +47,7 @@ async def on_guild_remove(guild):
 
 #Allows for guild users to change prefix (must be owner)
 @client.command()
-@command.is_owner()
+@commands.is_owner()
 async def changeprefix(ctx, prefix):
     with open('prefixes.json', 'r') as f:
         prefixes = json.load(f)
