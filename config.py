@@ -1,2 +1,0 @@
-#Put your Bot Token Here
-BOT_TOKEN = 'NjUzNzg5MzYzNDY1MDkzMTMy.XweWHw.prC8DEnYX2_v11R132Vv8VJ48WQ'
