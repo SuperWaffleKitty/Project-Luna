@@ -28,15 +28,19 @@ class Fa(commands.Cog):
         if Req.status_code != 200:
             await ctx.send(f"Couldn't contact FurAffinity. Error code: {Req.status_code}.\nJson: {ReqJson}")
             return
-        Post = ReqJson[random.randint(0,68)]
-
+        Post = ReqJson[random.randint(0,len(ReqJson) - 1)]
+        
         #Finds and returns image data based on post ID.
         Req = requests.get(f"https://faexport.spangle.org.uk/submission/{Post}.json")
         ReqJson = Req.json()
         if Req.status_code != 200:
             await ctx.send(f"Couldn't contact FurAffinity. Error code: {Req.status_code}.\nJson: {ReqJson}")
             return
-        Post = ReqJson["full"]
+        try:
+            Post = ReqJson["full"]
+        except KeyError:
+            await ctx.send(f"There was an error getting your FA content. Error Message: {ReqJson['error']}")
+            return
         await ctx.send(f"Here is your FurAffinity content: {Post}")
 
 
