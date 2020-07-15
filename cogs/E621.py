@@ -33,13 +33,13 @@ class E621(commands.Cog):
         #Changes request format if type = random
         if type == "random":
             headers = {"User-Agent":"Project-Luna/1.0 (API Usage by jezzar on E621)"}
-            Req = requests.get(f"https://e621.net/posts.json?tags=order:random&rating:explicit&limit=1", headers=headers)
+            Req = requests.get(f"https://e621.net/posts.json?tags=order:random+rating:explicit&limit=1", headers=headers)
             ReqJson = Req.json()
             if Req.status_code != 200:
                 await ctx.send(f"Couldn't contact e621. Error code: {Req.status_code}.\nJson: {ReqJson}")
                 return
             Post = ReqJson["posts"][0]["file"]["url"]
-            await ctx.send(f"Here is your {type} yiff: {Post}")
+            await ctx.send(f"Here is your {type} yiff: {Post}\nURL: https://e621.net/posts/{ReqJson['posts'][0]['id']}")
             return
 
         #This doesn't work -_-
@@ -49,14 +49,14 @@ class E621(commands.Cog):
         #Pulls and posts E621 content based on user criteria
         else:
             headers = {"User-Agent":"Project-Luna/1.0 (API Usage by jezzar on E621)"}
-            Req = requests.get(f"https://e621.net/posts.json?tags=order:random+{type}&rating:explicit&limit=1", headers=headers)
+            Req = requests.get(f"https://e621.net/posts.json?tags=order:random+{type}+rating:explicit&limit=1", headers=headers)
             ReqJson = Req.json()
             if Req.status_code != 200:
                 await ctx.send(f"Couldn't contact e621. Error code: {Req.status_code}.\nJson: {ReqJson}")
                 return
 
             Post = ReqJson["posts"][0]["file"]["url"]
-            await ctx.send(f"Here is your {type} yiff: {Post}")
+            await ctx.send(f"Here is your {type} yiff: {Post}\nURL: https://e621.net/posts/{ReqJson['posts'][0]['id']}")
             return
 
 

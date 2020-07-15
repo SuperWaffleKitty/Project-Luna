@@ -21,23 +21,27 @@ class Fa(commands.Cog):
     @commands.command()
     @commands.cooldown(1,3,commands.BucketType.user)
     async def fa(self, ctx, type):
-
+        FAMsg = await ctx.send("Getting FA post")
         #Finds random post id based on user criteria.
         Req = requests.get(f"https://faexport.spangle.org.uk/search.json?q={type}")
         ReqJson = Req.json()
         if Req.status_code != 200:
-            await ctx.send(f"Couldn't contact FurAffinity. Error code: {Req.status_code}.\nJson: {ReqJson}")
+            await FAMsg.edit(content=f"Couldn't contact FurAffinity. Error code: {Req.status_code}.\nJson: {ReqJson}")
             return
-        Post = ReqJson[random.randint(0,68)]
-
+        Post = ReqJson[random.randint(0,len(ReqJson) - 1)]
+        
         #Finds and returns image data based on post ID.
         Req = requests.get(f"https://faexport.spangle.org.uk/submission/{Post}.json")
         ReqJson = Req.json()
         if Req.status_code != 200:
-            await ctx.send(f"Couldn't contact FurAffinity. Error code: {Req.status_code}.\nJson: {ReqJson}")
+            await FAMsg.send(content=f"Couldn't contact FurAffinity. Error code: {Req.status_code}.\nJson: {ReqJson}")
             return
-        Post = ReqJson["full"]
-        await ctx.send(f"Here is your FurAffinity content: {Post}")
+        try:
+            Post = ReqJson["full"]
+        except KeyError:
+            await FAMsg.send(content=f"There was an error getting your FA content. Error Message: {ReqJson['error']}")
+            return
+        await FAMsg.send(content=f"Here is your FurAffinity content: {Post}")
 
 
 def setup(client):
