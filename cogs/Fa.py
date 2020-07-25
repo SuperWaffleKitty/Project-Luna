@@ -34,14 +34,14 @@ class Fa(commands.Cog):
         Req = requests.get(f"https://faexport.spangle.org.uk/submission/{Post}.json")
         ReqJson = Req.json()
         if Req.status_code != 200:
-            await FAMsg.send(content=f"Couldn't contact FurAffinity. Error code: {Req.status_code}.\nJson: {ReqJson}")
+            await FAMsg.edit(content=f"Couldn't contact FurAffinity. Error code: {Req.status_code}.\nJson: {ReqJson}")
             return
         try:
             Post = ReqJson["full"]
         except KeyError:
-            await FAMsg.send(content=f"There was an error getting your FA content. Error Message: {ReqJson['error']}")
+            await FAMsg.edit(content=f"There was an error getting your FA content. Error Message: {ReqJson['error']}")
             return
-        await FAMsg.send(content=f"Here is your FurAffinity content: {Post}")
+        await FAMsg.edit(content=f"Here is your FurAffinity content: {Post}")
 
 
 def setup(client):
