@@ -39,7 +39,7 @@ class E621(commands.Cog):
                 await ctx.send(f"Couldn't contact e621. Error code: {Req.status_code}.\nJson: {ReqJson}")
                 return
             Post = ReqJson["posts"][0]["file"]["url"]
-            await ctx.send(f"Here is your {type} yiff: {Post}\nURL: https://e621.net/posts/{ReqJson['posts'][0]['id']}")
+            await ctx.send(f"Here is your {type} yiff: {Post}\nURL: <https://e621.net/posts/{ReqJson['posts'][0]['id']}>")
             return
 
         #This doesn't work -_-
@@ -56,7 +56,7 @@ class E621(commands.Cog):
                 return
 
             Post = ReqJson["posts"][0]["file"]["url"]
-            await ctx.send(f"Here is your {type} yiff: {Post}\nURL: https://e621.net/posts/{ReqJson['posts'][0]['id']}")
+            await ctx.send(f"Here is your {type} yiff: {Post}\nURL: <https://e621.net/posts/{ReqJson['posts'][0]['id']}>")
             return
 
 
