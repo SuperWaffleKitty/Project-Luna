@@ -21,8 +21,7 @@ class Help(commands.Cog):
     @commands.cooldown(1,5,commands.BucketType.user)
     async def help(self, ctx):
         await ctx.send("Here is a list of commands:")
-        await ctx.send("```**$changeprefix [new prefix]**: Changes custom prefix " + "\n" + "**$help**: Displays this message" + "\n" + "**$yiff [tag]**: Shows random yiff from e621" + "\n" + "**$fa [tag]**: Shows random FurAffinity Content```")
-        await ctx.send("Notice: NSFW Commands can only be used in specified NSFW channels" + "\n" + "For more help, visit the readme at https://github.com/superwafflekitty/Project-Luna" + "\n" + "I hope you have a great time :wink:")
+        await ctx.send("```**$changeprefix [new prefix]**: Changes custom prefix (Owner Only)" + "\n" + "**$help**: Displays this message" + "\n" + "**$yiff [tag]**: Shows random yiff from e621" + "\n" + "**$fa [tag]**: Shows random FurAffinity Content```")
 
 def setup(client):
     client.add_cog(Help(client))
